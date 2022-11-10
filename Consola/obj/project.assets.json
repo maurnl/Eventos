@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "asdasd/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/asdasd.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/asdasd.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "asdasd/1.0.0": {
+      "type": "project",
+      "path": "../asdasd/asdasd.csproj",
+      "msbuildProject": "../asdasd/asdasd.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "asdasd >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Mauro\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\repos\\Luciano.Mauro.SegundoParcial\\Juegoxd\\Consola\\Consola.csproj",
+      "projectName": "Consola",
+      "projectPath": "C:\\repos\\Luciano.Mauro.SegundoParcial\\Juegoxd\\Consola\\Consola.csproj",
+      "packagesPath": "C:\\Users\\Mauro\\.nuget\\packages\\",
+      "outputPath": "C:\\repos\\Luciano.Mauro.SegundoParcial\\Juegoxd\\Consola\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Mauro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "C:\\repos\\Luciano.Mauro.SegundoParcial\\Juegoxd\\asdasd\\asdasd.csproj": {
+              "projectPath": "C:\\repos\\Luciano.Mauro.SegundoParcial\\Juegoxd\\asdasd\\asdasd.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

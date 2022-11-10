@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "PiedraPapelTijera/1.0.0": {
+        "dependencies": {
+          "asdasd": "1.0.0"
+        },
+        "runtime": {
+          "PiedraPapelTijera.dll": {}
+        }
+      },
+      "asdasd/1.0.0": {
+        "runtime": {
+          "asdasd.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PiedraPapelTijera/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "asdasd/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
