@@ -19,8 +19,8 @@ namespace Presentador
         {
             _vistaPrincipal = vistaPrincipal;
             _partidaRepository = partidaRepository;
-            _vistaPrincipal.ClickeoMostrarPersonas += MostrarPersonasHandler;
             _bindingSource = new BindingSource();
+            _vistaPrincipal.ClickeoMostrarPersonas += MostrarPersonasHandler;
         }
 
         private void MostrarPersonasHandler(object? sender, EventArgs e)
