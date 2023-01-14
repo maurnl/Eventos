@@ -15,19 +15,19 @@ namespace Presentador
         private readonly IVistaPrincipal _vistaPrincipal;
         private readonly IPersonaRepository _partidaRepository;
         private BindingSource _bindingSource;
-        private IServicioDataMock _servicioDataMock;
+        private IServicioDataRandom _servicioDataRandom;
 
         public PresentadorPrincipal(
             IVistaPrincipal vistaPrincipal,
             IPersonaRepository partidaRepository,
-            IServicioDataMock servicioDataMock)
+            IServicioDataRandom servicioDataRandom)
         {
             _vistaPrincipal = vistaPrincipal;
             _partidaRepository = partidaRepository;
             _bindingSource = new BindingSource();
             _vistaPrincipal.ClickeoMostrarPersonas += MostrarPersonasHandler;
-            _vistaPrincipal.ClickeoMostrarPersonaRandom += MostrarPersonaMock;
-            _servicioDataMock = servicioDataMock;
+            _vistaPrincipal.ClickeoMostrarPersonaRandom += MostrarPersonaRandom;
+            _servicioDataRandom = servicioDataRandom;
         }
 
         private void MostrarPersonasHandler(object? sender, EventArgs e)
@@ -36,9 +36,9 @@ namespace Presentador
             _vistaPrincipal.ActualizarBindingSource(_bindingSource);
         }
 
-        private void MostrarPersonaMock(object? sender, EventArgs e)
+        private void MostrarPersonaRandom(object? sender, EventArgs e)
         {
-            _vistaPrincipal.MostrarPersonaRandom(_servicioDataMock.ObtenerPersonaMock());
+            _vistaPrincipal.MostrarPersonaRandom(_servicioDataRandom.ObtenerPersonaRandom());
         }
     }
 }

@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Aplicacion.Servicios
 {
-    public interface IServicioDataMock
+    public interface IServicioDataRandom
     {
-        ModeloPersona ObtenerPersonaMock();
+        ModeloPersona ObtenerPersonaRandom();
     }
 }

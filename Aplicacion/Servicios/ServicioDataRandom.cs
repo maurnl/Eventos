@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Aplicacion.Servicios
 {
-    public class ServicioDataMock : IServicioDataMock
+    public class ServicioDataRandom : IServicioDataRandom
     {
         private readonly string[] _nombres;
 
-        public ServicioDataMock()
+        public ServicioDataRandom()
         {
             _nombres = new string[]
             {
@@ -22,7 +22,7 @@ namespace Aplicacion.Servicios
             };
         }
 
-        public ModeloPersona ObtenerPersonaMock()
+        public ModeloPersona ObtenerPersonaRandom()
         {
             var random = new Random();
             return new ModeloPersona
