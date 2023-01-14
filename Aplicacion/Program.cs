@@ -1,4 +1,5 @@
 using Aplicacion.Modelo;
+using Aplicacion.Servicios;
 using Aplicacion.Vista;
 using Microsoft.Extensions.DependencyInjection;
 using Modelo;
@@ -19,6 +20,7 @@ namespace Vista
         {
             var services = new ServiceCollection();
             services.AddTransient<PresentadorPrincipal>();
+            services.AddTransient<IServicioDataMock, ServicioDataMock>();
             services.AddSingleton<IVistaPrincipal, VistaPrincipal>();
             services.AddTransient<IPersonaRepository, MockPartidaRepository>();
             ServiceProvider = services.BuildServiceProvider();

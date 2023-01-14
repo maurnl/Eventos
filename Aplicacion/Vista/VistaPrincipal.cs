@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Presentador;
+using Modelo;
 
 namespace Vista
 {
@@ -20,10 +21,16 @@ namespace Vista
         }
 
         public event EventHandler ClickeoMostrarPersonas;
+        public event EventHandler ClickeoMostrarPersonaRandom;
 
         public void ActualizarBindingSource(BindingSource bindingSource)
         {
             this.dataGridView1.DataSource = bindingSource;
+        }
+
+        public void MostrarPersonaRandom(ModeloPersona persona)
+        {
+            MessageBox.Show($"Nombre random: {persona.Name}, Id: {persona.Id}.");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,9 +38,9 @@ namespace Vista
             ClickeoMostrarPersonas?.Invoke(sender, e);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnRandom_Click(object sender, EventArgs e)
         {
-           // ...
+            ClickeoMostrarPersonaRandom?.Invoke(sender, e);
         }
     }
 }
