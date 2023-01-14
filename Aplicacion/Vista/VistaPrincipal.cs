@@ -28,9 +28,9 @@ namespace Vista
             this.dataGridView1.DataSource = bindingSource;
         }
 
-        public void MostrarPersonaRandom(ModeloPersona persona)
+        public void MostrarPersonaRandom(PersonaLectura persona)
         {
-            MessageBox.Show($"Nombre random: {persona.Name}, Id: {persona.Id}.");
+            MessageBox.Show($"Nombre random: {persona.Nombre}, Id: {persona.Id}.");
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelo
+namespace Aplicacion.Dtos
 {
-    public class ModeloPersona
+    public class PersonaLectura
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public string EsClienteVip { get; set; }
     }
 }

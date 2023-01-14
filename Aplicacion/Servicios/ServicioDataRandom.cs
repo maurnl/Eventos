@@ -28,7 +28,7 @@ namespace Aplicacion.Servicios
             return new ModeloPersona
             {
                 Id = random.Next(0, 200),
-                Name = _nombres[random.Next(0, _nombres.Length)]
+                Nombre = _nombres[random.Next(0, _nombres.Length)]
             };
         }
     }

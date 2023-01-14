@@ -16,12 +16,12 @@ namespace Aplicacion.Modelo
                 new ModeloPersona
                 {
                     Id = 1,
-                    Name = "Testo"
+                    Nombre = "Testo"
                 },
                 new ModeloPersona
                 {
                     Id = 2,
-                    Name = "Testonio"
+                    Nombre = "Testonio"
                 }
             };
         }

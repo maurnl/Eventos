@@ -1,4 +1,5 @@
-﻿using Aplicacion.Servicios;
+﻿using Aplicacion.Dtos;
+using Aplicacion.Servicios;
 using Aplicacion.Vista;
 using Modelo;
 using System;
@@ -32,13 +33,14 @@ namespace Presentador
 
         private void MostrarPersonasHandler(object? sender, EventArgs e)
         {
-            _bindingSource.DataSource = _partidaRepository.GetAll();
+            _bindingSource.DataSource = _partidaRepository.GetAll().Select(p => new PersonaLectura { Id = p.Id, Nombre = p.Nombre });
             _vistaPrincipal.ActualizarBindingSource(_bindingSource);
         }
 
         private void MostrarPersonaRandom(object? sender, EventArgs e)
         {
-            _vistaPrincipal.MostrarPersonaRandom(_servicioDataRandom.ObtenerPersonaRandom());
+            var persona = _servicioDataRandom.ObtenerPersonaRandom();
+            _vistaPrincipal.MostrarPersonaRandom(new PersonaLectura { Id = persona.Id, Nombre = persona.Nombre });
         }
     }
 }
