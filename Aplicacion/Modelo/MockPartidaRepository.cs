@@ -9,7 +9,7 @@ namespace Aplicacion.Modelo
 {
     public class MockPartidaRepository : IPersonaRepository
     {
-        public List<ModeloPersona> GetAll()
+        public IEnumerable<ModeloPersona> GetAll()
         {
             return new List<ModeloPersona>
             {

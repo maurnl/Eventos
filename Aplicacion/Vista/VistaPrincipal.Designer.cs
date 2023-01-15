@@ -33,6 +33,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRandom = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(195, 68);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Nueva partida";
+            this.button1.Text = "Obtener personas";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -71,9 +72,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 29F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(21, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 52);
+            this.label2.Size = new System.Drawing.Size(176, 52);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Partidas";
+            this.label2.Text = "Personas";
             // 
             // btnRandom
             // 
@@ -85,11 +86,21 @@
             this.btnRandom.UseVisualStyleBackColor = true;
             this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(624, 53);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(164, 65);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // VistaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnRandom);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
@@ -110,5 +121,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnRandom;
+        private System.Windows.Forms.Button button2;
     }
 }

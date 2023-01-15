@@ -20,7 +20,7 @@ namespace Vista
         {
             var services = new ServiceCollection();
             services.AddTransient<PresentadorPrincipal>();
-            services.AddTransient<IServicioDataMock, ServicioDataMock>();
+            services.AddTransient<IServicioDataRandom, ServicioDataRandom>();
             services.AddSingleton<IVistaPrincipal, VistaPrincipal>();
             services.AddTransient<IPersonaRepository, MockPartidaRepository>();
             ServiceProvider = services.BuildServiceProvider();

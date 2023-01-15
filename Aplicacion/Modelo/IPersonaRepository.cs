@@ -8,6 +8,6 @@ namespace Modelo
 {
     public interface IPersonaRepository
     {
-        List<ModeloPersona> GetAll();
+        IEnumerable<ModeloPersona> GetAll();
     }
 }

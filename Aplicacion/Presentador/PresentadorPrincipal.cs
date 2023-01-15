@@ -5,6 +5,7 @@ using Modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,7 +15,7 @@ namespace Presentador
     public class PresentadorPrincipal
     {
         private readonly IVistaPrincipal _vistaPrincipal;
-        private readonly IPersonaRepository _partidaRepository;
+        private readonly IPersonaRepository _personasRepository;
         private BindingSource _bindingSource;
         private IServicioDataRandom _servicioDataRandom;
 
@@ -24,16 +25,17 @@ namespace Presentador
             IServicioDataRandom servicioDataRandom)
         {
             _vistaPrincipal = vistaPrincipal;
-            _partidaRepository = partidaRepository;
+            _personasRepository = partidaRepository;
             _bindingSource = new BindingSource();
-            _vistaPrincipal.ClickeoMostrarPersonas += MostrarPersonasHandler;
+            _vistaPrincipal.ClickeoMostrarPersonas += MostrarPersonas;
             _vistaPrincipal.ClickeoMostrarPersonaRandom += MostrarPersonaRandom;
             _servicioDataRandom = servicioDataRandom;
         }
 
-        private void MostrarPersonasHandler(object? sender, EventArgs e)
+        private void MostrarPersonas(object? sender, EventArgs e)
         {
-            _bindingSource.DataSource = _partidaRepository.GetAll().Select(p => new PersonaLectura { Id = p.Id, Nombre = p.Nombre });
+            _bindingSource.DataSource = _personasRepository.GetAll()
+                                        .Select(p => new PersonaLectura { Id = p.Id, Nombre = p.Nombre });
             _vistaPrincipal.ActualizarBindingSource(_bindingSource);
         }
 
