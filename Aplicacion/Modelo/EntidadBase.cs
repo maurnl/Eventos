@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aplicacion.Dtos
+namespace Aplicacion.Modelo
 {
-    public class PersonaLectura
+    public class EntidadBase
     {
+        [Key]
         public int Id { get; set; }
-        public string Nombre { get; set; }
     }
 }

@@ -29,7 +29,7 @@ namespace Vista
             this.dataGridView1.DataSource = bindingSource;
         }
 
-        public void MostrarPersonaRandom(PersonaLectura persona)
+        public void MostrarPersonaRandom(PersonaLecturaDto persona)
         {
             MessageBox.Show($"Nombre random: {persona.Nombre}, Id: {persona.Id}.");
         }

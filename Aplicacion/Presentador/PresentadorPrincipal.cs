@@ -35,14 +35,14 @@ namespace Presentador
         private void MostrarPersonas(object? sender, EventArgs e)
         {
             _bindingSource.DataSource = _personasRepository.GetAll()
-                                        .Select(p => new PersonaLectura { Id = p.Id, Nombre = p.Nombre });
+                                        .Select(p => new PersonaLecturaDto { Id = p.Id, Nombre = p.Nombre });
             _vistaPrincipal.ActualizarBindingSource(_bindingSource);
         }
 
         private void MostrarPersonaRandom(object? sender, EventArgs e)
         {
             var persona = _servicioDataRandom.ObtenerPersonaRandom();
-            _vistaPrincipal.MostrarPersonaRandom(new PersonaLectura { Id = persona.Id, Nombre = persona.Nombre });
+            _vistaPrincipal.MostrarPersonaRandom(new PersonaLecturaDto { Id = persona.Id, Nombre = persona.Nombre });
         }
     }
 }

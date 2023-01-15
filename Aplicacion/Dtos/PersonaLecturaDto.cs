@@ -1,15 +1,14 @@
-﻿using Aplicacion.Modelo;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelo
+namespace Aplicacion.Dtos
 {
-    public class ModeloPersona : EntidadBase
+    public class PersonaLecturaDto
     {
+        public int Id { get; set; }
         public string Nombre { get; set; }
-        public bool EsClienteVip { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace Aplicacion.Vista
     public interface IVistaPrincipal
     {
         void ActualizarBindingSource(BindingSource bindingSource);
-        void MostrarPersonaRandom(PersonaLectura persona);
+        void MostrarPersonaRandom(PersonaLecturaDto persona);
 
         event EventHandler ClickeoMostrarPersonas;
         event EventHandler ClickeoMostrarPersonaRandom;
