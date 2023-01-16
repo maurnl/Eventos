@@ -16,7 +16,6 @@ namespace Presentador
     {
         private readonly IVistaPrincipal _vistaPrincipal;
         private readonly IPersonaRepository _personasRepository;
-        private BindingSource _bindingSource;
         private IServicioDataRandom _servicioDataRandom;
 
         public PresentadorPrincipal(
@@ -26,7 +25,6 @@ namespace Presentador
         {
             _vistaPrincipal = vistaPrincipal;
             _personasRepository = partidaRepository;
-            _bindingSource = new BindingSource();
             _vistaPrincipal.ClickeoMostrarPersonas += MostrarPersonas;
             _vistaPrincipal.ClickeoMostrarPersonaRandom += MostrarPersonaRandom;
             _servicioDataRandom = servicioDataRandom;
@@ -34,9 +32,9 @@ namespace Presentador
 
         private void MostrarPersonas(object? sender, EventArgs e)
         {
-            _bindingSource.DataSource = _personasRepository.GetAll()
+            var personas = _personasRepository.GetAll()
                                         .Select(p => new PersonaLecturaDto { Id = p.Id, Nombre = p.Nombre });
-            _vistaPrincipal.ActualizarBindingSource(_bindingSource);
+            _vistaPrincipal.ActualizarListaPersonas(personas);
         }
 
         private void MostrarPersonaRandom(object? sender, EventArgs e)

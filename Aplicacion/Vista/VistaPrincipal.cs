@@ -16,17 +16,20 @@ namespace Vista
 {
     public partial class VistaPrincipal : Form, IVistaPrincipal
     {
+        private BindingSource _bindingSource;
         public VistaPrincipal()
         {
+            _bindingSource = new BindingSource();
             InitializeComponent();
         }
 
         public event EventHandler ClickeoMostrarPersonas;
         public event EventHandler ClickeoMostrarPersonaRandom;
 
-        public void ActualizarBindingSource(BindingSource bindingSource)
+        public void ActualizarListaPersonas(IEnumerable<PersonaLecturaDto> personas)
         {
-            this.dataGridView1.DataSource = bindingSource;
+            _bindingSource.DataSource = personas;
+            dataGridView1.DataSource = _bindingSource;
         }
 
         public void MostrarPersonaRandom(PersonaLecturaDto persona)

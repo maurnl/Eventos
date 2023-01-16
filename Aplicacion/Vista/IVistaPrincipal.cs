@@ -11,7 +11,7 @@ namespace Aplicacion.Vista
 {
     public interface IVistaPrincipal
     {
-        void ActualizarBindingSource(BindingSource bindingSource);
+        void ActualizarListaPersonas(IEnumerable<PersonaLecturaDto> personas);
         void MostrarPersonaRandom(PersonaLecturaDto persona);
 
         event EventHandler ClickeoMostrarPersonas;
